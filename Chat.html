@@ -51,7 +51,6 @@
 			}
 		);
         embedded_svc.addEventHandler("onChasitorMessage", function(data) {
-            debugger;
             setTimeout(getLastMessage, 2000);
         });
 	};
@@ -70,8 +69,11 @@
         let sendMessageRequest = new XMLHttpRequest();
         let requestURL = orgURL + '/services/apexrest/discord'; 
         sendMessageRequest.open('POST', requestURL);
-        sendMessageRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-        sendMessageRequest.send("content=" + content);
+        sendMessageRequest.setRequestHeader('Content-Type', 'application/JSON');
+        var requestBody = {
+            "content": content
+        }
+        sendMessageRequest.send(requestBody);
         sendMessageRequest.onload = () => {
             console.log(sendMessageRequest.status + ' ' + sendMessageRequest.statusText);
         }
