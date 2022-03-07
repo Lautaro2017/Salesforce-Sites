@@ -60,7 +60,18 @@
         let messages = document.getElementsByClassName('uiOutputRichText');
         if (messages && messages.length){
             let currentMessage = messages[messages.length - 1];
-            console.log('message sent: ' + currentMessage.outerText);
+            sendRequest(currentMessage);
+        }
+    }
+
+    function sendRequest(content){
+        let sendMessageRequest = new XMLHttpRequest();
+        let requestURL = orgURL + '/services/apexrest/discord'; 
+        sendMessageRequest.open('POST', requestURL);
+        sendMessageRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        sendMessageRequest.send('content=' + content);
+        sendMessageRequest.onload = () => {
+            console.log(sendMessageRequest.status + ' ' + sendMessageRequest.statusText);
         }
     }
 
