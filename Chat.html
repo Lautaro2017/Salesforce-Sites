@@ -55,7 +55,7 @@
             console.log('here');
             let messages = document.getElementsByClassName('uiOutputRichText');
             if (messages && messages.length){
-                let currentMessage = messages[messages.length];
+                let currentMessage = messages[messages.length - 1];
                 console.log('message sent: ' + currentMessage.outerText);
             }
         });
