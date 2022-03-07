@@ -50,11 +50,10 @@
 				isOfflineSupportEnabled: true
 			}
 		);
+        embedded_svc.addEventHandler("onChasitorMessage", function(data) {
+            console.log("onChasitorMessage event was fired.  liveAgentSessionKey was " + data.liveAgentSessionKey);
+        });
 	};
-
-    embedded_svc.addEventHandler("onChasitorMessage", function(data) {
-        console.log("onChasitorMessage event was fired.  liveAgentSessionKey was " + data.liveAgentSessionKey);
-    });
 
 	if (!window.embedded_svc) {
 		var s = document.createElement('script');
