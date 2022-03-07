@@ -71,7 +71,7 @@
         let requestURL = orgURL + '/services/apexrest/discord'; 
         sendMessageRequest.open('POST', requestURL);
         sendMessageRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-        sendMessageRequest.send('content=' + content);
+        sendMessageRequest.send("content=" + content);
         sendMessageRequest.onload = () => {
             console.log(sendMessageRequest.status + ' ' + sendMessageRequest.statusText);
         }
