@@ -60,7 +60,7 @@
         let messages = document.getElementsByClassName('uiOutputRichText');
         if (messages && messages.length){
             let currentMessage = messages[messages.length - 1];
-            sendRequest(currentMessage);
+            sendRequest(currentMessage.outerText);
         }
     }
 
