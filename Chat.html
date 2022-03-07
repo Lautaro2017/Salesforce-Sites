@@ -52,14 +52,17 @@
 		);
         embedded_svc.addEventHandler("onChasitorMessage", function(data) {
             debugger;
-            console.log('here');
-            let messages = document.getElementsByClassName('uiOutputRichText');
-            if (messages && messages.length){
-                let currentMessage = messages[messages.length - 1];
-                console.log('message sent: ' + currentMessage.outerText);
-            }
+            setTimeout(getLastMessage, 2000);
         });
 	};
+
+    function getLastMessage(){
+        let messages = document.getElementsByClassName('uiOutputRichText');
+        if (messages && messages.length){
+            let currentMessage = messages[messages.length - 1];
+            console.log('message sent: ' + currentMessage.outerText);
+        }
+    }
 
 	if (!window.embedded_svc) {
 		var s = document.createElement('script');
