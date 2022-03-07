@@ -51,6 +51,7 @@
 			}
 		);
         embedded_svc.addEventHandler("onChasitorMessage", function(data) {
+            debugger;
             let messages = document.getElementsByClassName('uiOutputRichText');
             if (messages && messages.length){
                 let currentMessage = messages[messages.length];
