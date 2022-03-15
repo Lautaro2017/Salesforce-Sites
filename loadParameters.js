@@ -1,4 +1,5 @@
 debugger;
+console.log('here');
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const leadId = urlParams.get('id');
