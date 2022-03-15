@@ -1,23 +1,33 @@
 <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
-  <title>
-    Web to Lead Form
-  </title>
-  <head>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <h1>Web to Lead Form</h1>
-    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
-       <input type=hidden name="oid" value="00D6g000003sAKm">
-       <input type=hidden name="retURL" value="http://">
-       <label for="first_name">First Name</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
-       <label for="last_name">Last Name</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
-       <label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
-       <label for="company">Company</label><input  id="company" maxlength="40" name="company" size="20" type="text" /><br>
-       <label for="country">Country</label><input  id="country" maxlength="40" name="country" size="20" type="text" /><br>
-       <label for="state">State/Province</label><input  id="state" maxlength="20" name="state" size="20" type="text" /><br>
-       <label for="city">City</label><input  id="city" maxlength="40" name="city" size="20" type="text" /><br>
-       <label for="mobile">Mobile</label><input  id="mobile" maxlength="40" name="mobile" size="20" type="text" /><br>
-       <input type="submit" name="submit">
-    </form>
- </body>
+
+<form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+
+<input type=hidden name="oid" value="00D6g000003sAKm">
+<input type=hidden name="retURL" value="http://">
+
+<label for="first_name">First Name</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
+
+<label for="last_name">Last Name</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
+
+<label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
+
+<label for="company">Company</label><input  id="company" maxlength="40" name="company" size="20" type="text" /><br>
+
+<label for="city">City</label><input  id="city" maxlength="40" name="city" size="20" type="text" /><br>
+
+<label for="state">State/Province</label><input  id="state" maxlength="20" name="state" size="20" type="text" /><br>
+
+<input  id="00N6g00000VFlh4" maxlength="18" name="00N6g00000VFlh4" size="20" type="hidden" /><br>
+
+<input type="submit" name="submit">
+
+</form>
+
+<script>
+  debugger;
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const leadId = urlParams.get('id');
+  let idInput = document.getElementById('00N6g00000VFlh4');
+  idInput.value = leadId;
+</script>
