@@ -7,6 +7,7 @@
 
 <head>
   <link rel="stylesheet" href="styles.css">
+  <script type="text/javascript" src="loadParameters.js"></script>
 </head>
   
 <label for="first_name">First Name</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
@@ -26,12 +27,3 @@
 <input type="submit" name="submit">
 
 </form>
-
-<script>
-  debugger;
-  const queryString = window.location.search;
-  const urlParams = new URLSearchParams(queryString);
-  const leadId = urlParams.get('id');
-  let idInput = document.getElementById('00N6g00000VFlh4');
-  idInput.value = leadId;
-</script>
