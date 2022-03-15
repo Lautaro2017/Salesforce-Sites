@@ -8,19 +8,22 @@
 <head>
   <link rel="stylesheet" href="styles.css">
   <script>
-    function loadParameters(){
-      debugger;
-      console.log('here');
-      const queryString = window.location.search;
-      const urlParams = new URLSearchParams(queryString);
-      const leadId = urlParams.get('id');
-      let idInput = document.getElementById('00N6g00000VFlh4');
-      idInput.value = leadId;
-    }
+    function myFunction() {
+    alert("Page is loaded");
+  }
+//     function loadParameters(){
+//       debugger;
+//       console.log('here');
+//       const queryString = window.location.search;
+//       const urlParams = new URLSearchParams(queryString);
+//       const leadId = urlParams.get('id');
+//       let idInput = document.getElementById('00N6g00000VFlh4');
+//       idInput.value = leadId;
+//     }
   </script>
 </head>
  
- <body onload = "loadParameters();">
+ <body onload="myFunction()">
   <label for="first_name">First Name</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
 
   <label for="last_name">Last Name</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
