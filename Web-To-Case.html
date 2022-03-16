@@ -6,23 +6,23 @@
   
 <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
 <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
+  <body onload="loadParameters()">
+    <input type=hidden name="orgid" value="00D6g000003sAKm">
+    <input type=hidden name="retURL" value="http://">
 
-<input type=hidden name="orgid" value="00D6g000003sAKm">
-<input type=hidden name="retURL" value="http://">
+    <label for="name">Name</label><input  id="name" maxlength="80" name="name" size="20" type="text" /><br>
 
-<label for="name">Name</label><input  id="name" maxlength="80" name="name" size="20" type="text" /><br>
+    <label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
 
-<label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
+    <label for="subject">Subject</label><input  id="subject" maxlength="80" name="subject" size="20" type="text" /><br>
 
-<label for="subject">Subject</label><input  id="subject" maxlength="80" name="subject" size="20" type="text" /><br>
+    <input  id="origin" maxlength="18" name="origin" type="hidden" value="Web" /><br>
 
-<input  id="origin" maxlength="18" name="origin" type="hidden" value="Web" /><br>
-  
-<input  id="00N6g00000VFlj0" maxlength="18" name="discordId" size="20" type="hidden" /><br>
+    <input  id="00N6g00000VFlj0" maxlength="18" name="00N6g00000VFlj0" class="discordId" size="20" type="hidden" /><br>
 
-<input type="hidden"  id="external" name="external" value="1" /><br>
+    <input type="hidden"  id="external" name="external" value="1" /><br>
 
-<input type="submit" name="submit">
-
+    <input type="submit" name="submit">
+  </body>
 </form>
 
