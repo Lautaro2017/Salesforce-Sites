@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
-        <script src="index.js"></script>
-</head>
 <body>
 
 <h2>Test Form</h2>
-
-<form action="sendMessage()">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" value=""><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" value=""><br><br>
-  <button type="button" onclick="sendMessage()">Submit</button>
-</form> 
+<label for="fname">First name:</label><br>
+<input type="text" id="fname" name="fname" value=""><br>
+<label for="lname">Last name:</label><br>
+<input type="text" id="lname" name="lname" value=""><br><br>
+<button type="button" onclick="sendMessage()">Submit</button>
+<script>
+        function sendMessage() {
+                console.log('here');
+        }
+</script>
+        
 </body>
 </html>
