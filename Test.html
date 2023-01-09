@@ -11,7 +11,7 @@
 <script>
         function sendMessage() {
                 console.log('here');
-                window.postMessage({success: true}, "*");
+                window.parent.postMessage({success: true}, "*");
         }
 </script>
         
